@@ -33,4 +33,6 @@ describe "Viewing the list of movies" do
 		expect(page).to have_text("$318,412,101.00")
 
 	end
+
+
 end
