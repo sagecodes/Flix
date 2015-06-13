@@ -1,6 +1,6 @@
 <h1><%= pluralize(@movies.size, "Movie") %> Reviewed!</h1>
 
-
+<%= link_to 'Add New Movie', new_movie_path %>
 
 <% @movies.each do |movie| %>
 <article>
@@ -18,7 +18,6 @@
 		<tr>
 			<th>Released on:</th>
 			<td><%= movie.released_on %> <%= time_ago_in_words(movie.released_on) %> ago</td>
-
 		</tr>
 		<tr>
 			<th>Gross earnings:</th>
