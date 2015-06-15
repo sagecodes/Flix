@@ -1,24 +1,41 @@
 <article>
 	<header>
+		<%= image_for(@movie) %>
 		<h1><%= @movie.title %></h1>
 	</header>
 	<p>
 		<%= @movie.description %>
 	</p>
-	<table>
-		<tr>
-			<th>When:</th>
-			<td><%= @movie.rating %></td>
-		</tr>
-		<tr>
-			<th>Where:</th>
-			<td><%= @movie.released_on %></td>
-		</tr>
-		<tr>
-			<th>Price:</th>
-			<td><%= format_total_gross(@movie)%></td>
-		</tr>
-	</table>
+
+	<h3>Cast</h3>
+	<p>
+	  <%= @movie.cast %>
+	</p>
+
+	<h3>Director</h3>
+	<p>
+	  <%= @movie.director %>
+	</p>
+
+	<h3>Duration</h3>
+	<p>
+	  <%= @movie.duration %>
+	</p>
+
+	<h3>Rating:</h3>
+	<p>
+		<%= @movie.rating %>
+	</p>
+
+	<h3>Released on:</h3>
+	<p>
+		<%= @movie.released_on %>
+	</p>
+
+	<h3> Gross earnings:</h3>
+	<p>
+		<%= format_total_gross(@movie)%>
+	</p>
 </article>
 <nav>
 <%= link_to "<< All Movies", root_path %>
