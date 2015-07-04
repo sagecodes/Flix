@@ -22,7 +22,10 @@
   <p>
     <%= @movie.director %>
   </p>
-
+  <h3>Average Review</h3>
+  <p>
+    <%= format_average_stars(@movie) %>
+  </p>
   <h3>Total Gross</h3>
   <p>
     <%= format_total_gross(@movie) %>

@@ -25,6 +25,10 @@ RATINGS = %w(G PG PG-13 R NC-17)
 		where("released_on <= ?", Time.now).order("released_on desc")
 	end
 
+	def average_stars
+  	reviews.average(:stars)
+	end
+
 
 #query methods for future use!
 	def self.hits
