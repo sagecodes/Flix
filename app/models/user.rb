@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 #  validates :password, length: { minimum: 10, allow_blank: true }
 
 
+
 end
